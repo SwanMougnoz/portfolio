@@ -1,24 +1,28 @@
 import React, {Component} from 'react';
-import './Counter/Counter';
+import {BrowserRouter, Route} from 'react-router-dom'
+import {Container} from "semantic-ui-react";
+
 import './App.css';
 import Header from "./Header/Header";
-import {Container, Grid} from "semantic-ui-react";
+import Blog from "./Blog/Blog";
+import Contact from "./Contact/Contact";
+import Projects from "./Projects/Projects";
+import Home from "./Home/Home";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header/>
-        <Container>
-          <Grid columns={12}>
-            <Grid.Row>
-              <Grid.Column>Bla bla bla</Grid.Column>
-              <Grid.Column>Bla bla bla</Grid.Column>
-              <Grid.Column>Bla bla bla</Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header/>
+          <Container>
+            <Route path="/blog" component={Blog}/>
+            <Route path="/home" component={Home}/>
+            <Route path="/projects" component={Projects}/>
+            <Route path="/contact" component={Contact}/>
+          </Container>
+        </div>
+     </BrowserRouter>
     );
   }
 }

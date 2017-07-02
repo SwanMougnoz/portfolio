@@ -7,9 +7,6 @@ import SiteMenu from "./SiteMenu/SiteMenu";
 import LoadingProgress from "./LoadingProgress/LoadingProgress";
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="header">

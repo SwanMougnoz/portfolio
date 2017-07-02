@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Menu } from 'semantic-ui-react'
+import {Link} from "react-router-dom";
 
 export default class SiteMenu extends Component {
   constructor(props) {
@@ -18,16 +19,16 @@ export default class SiteMenu extends Component {
     return (
       <Menu secondary>
         <Menu.Menu position='right'>
-          <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
+          <Menu.Item as={Link} to="/home" name="home" active={activeItem === "home"}>
             Accueil
           </Menu.Item>
-          <Menu.Item name="projects" active={activeItem === "projects"} onClick={this.handleItemClick}>
+          <Menu.Item as={Link} to="/projects" name="projects" active={activeItem === "projects"}>
             Projets
           </Menu.Item>
-          <Menu.Item name="blog" active={activeItem === "blog"} onClick={this.handleItemClick}>
+          <Menu.Item as={Link} to="/blog"  name="blog" active={activeItem === "blog"}>
             Blog
           </Menu.Item>
-          <Menu.Item name="contact" active={activeItem === "contact"} onClick={this.handleItemClick}>
+          <Menu.Item as={Link} to="/contact" name="contact" active={activeItem === "contact"}>
             Contact
           </Menu.Item>
         </Menu.Menu>
