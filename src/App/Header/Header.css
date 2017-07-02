@@ -1,0 +1,21 @@
+.header {
+    margin-bottom: 1rem;
+}
+
+.header .row > .column {
+    height: 75px;
+    position: relative;
+}
+
+.header .menu, .header h1 {
+    position: absolute;
+    bottom: 0;
+}
+
+.header .menu {
+    right: 1rem;
+}
+
+.header h1 {
+    left: 1rem;
+}

@@ -17,18 +17,20 @@ export default class SiteMenu extends Component {
     //noinspection HtmlDeprecatedTag
     return (
       <Menu secondary>
-        <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
-          Accueil
-        </Menu.Item>
-        <Menu.Item name="projects" active={activeItem === "projects"} onClick={this.handleItemClick}>
-          Projets
-        </Menu.Item>
-        <Menu.Item name="blog" active={activeItem === "blog"} onClick={this.handleItemClick}>
-          Blog
-        </Menu.Item>
-        <Menu.Item name="contact" active={activeItem === "contact"} onClick={this.handleItemClick}>
-          Contact
-        </Menu.Item>
+        <Menu.Menu position='right'>
+          <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
+            Accueil
+          </Menu.Item>
+          <Menu.Item name="projects" active={activeItem === "projects"} onClick={this.handleItemClick}>
+            Projets
+          </Menu.Item>
+          <Menu.Item name="blog" active={activeItem === "blog"} onClick={this.handleItemClick}>
+            Blog
+          </Menu.Item>
+          <Menu.Item name="contact" active={activeItem === "contact"} onClick={this.handleItemClick}>
+            Contact
+          </Menu.Item>
+        </Menu.Menu>
       </Menu>
     )
   }
