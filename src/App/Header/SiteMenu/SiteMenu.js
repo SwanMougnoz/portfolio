@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Menu } from 'semantic-ui-react'
-import {Link} from "react-router-dom";
+import Item from "./Item";
 
 export default class SiteMenu extends Component {
   constructor(props) {
@@ -8,9 +8,11 @@ export default class SiteMenu extends Component {
     this.state = {
       activeItem: null
     };
+
+    this.setActiveItem = this.setActiveItem.bind(this);
   }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  setActiveItem = (item) => this.setState({ activeItem: item});
 
   render() {
     const { activeItem } = this.state;
@@ -19,18 +21,10 @@ export default class SiteMenu extends Component {
     return (
       <Menu secondary>
         <Menu.Menu position='right'>
-          <Menu.Item as={Link} to="/home" name="home" active={activeItem === "home"}>
-            Accueil
-          </Menu.Item>
-          <Menu.Item as={Link} to="/projects" name="projects" active={activeItem === "projects"}>
-            Projets
-          </Menu.Item>
-          <Menu.Item as={Link} to="/blog"  name="blog" active={activeItem === "blog"}>
-            Blog
-          </Menu.Item>
-          <Menu.Item as={Link} to="/contact" name="contact" active={activeItem === "contact"}>
-            Contact
-          </Menu.Item>
+          <Item linkto="/home" label="Accueil" activeItem={activeItem} setActive={this.setActiveItem}/>
+          <Item linkto="/blog" label="Blog" activeItem={activeItem} setActive={this.setActiveItem}/>
+          <Item linkto="/projects" label="Projets" activeItem={activeItem} setActive={this.setActiveItem}/>
+          <Item linkto="/contact" label="Contact" activeItem={activeItem} setActive={this.setActiveItem}/>
         </Menu.Menu>
       </Menu>
     )
