@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Grid} from "semantic-ui-react";
 
-import './LoadingProgress.css'
+import './style.css'
 
 export default class LoadingProgress extends Component {
   render() {

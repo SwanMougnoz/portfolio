@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Logo.css'
+import './style.css'
 import {Header} from "semantic-ui-react";
 
 export default class Logo extends Component {

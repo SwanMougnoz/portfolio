@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {LinkMenu, LinkMenuItem} from "portfolio/App/Common/Lib/LinkMenu/LinkMenu";
+import {LinkMenu, LinkMenuItem} from "portfolio/app/common/lib/linkMenu";
 
 export default class SiteMenu extends Component {
   render() {

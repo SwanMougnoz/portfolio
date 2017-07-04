@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom'
 import {Container} from "semantic-ui-react";
 
-import './App.css';
-import Header from "portfolio/App/Common/Header/Header";
-import Blog from "./Blog/Blog";
-import Contact from "./Contact/Contact";
-import Projects from "./Projects/Projects";
-import Home from "./Home/Home";
+import './style.css';
+import Header from "portfolio/app/common/header";
+import Blog from "./blog";
+import Contact from "./contact";
+import Projects from "./projects";
+import Home from "./home";
 
 class App extends Component {
   render() {

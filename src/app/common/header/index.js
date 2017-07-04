@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {Container, Grid} from "semantic-ui-react";
 
-import './Header.css'
-import Logo from "./Logo/Logo";
-import SiteMenu from "./SiteMenu/SiteMenu";
-import LoadingProgress from "./LoadingProgress/LoadingProgress";
+import './style.css'
+import Logo from "./logo";
+import SiteMenu from "./sitemenu";
+import LoadingProgress from "./loadingProgress";
 
 export default class Header extends Component {
   render() {
