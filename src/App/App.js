@@ -3,7 +3,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import {Container} from "semantic-ui-react";
 
 import './App.css';
-import Header from "./Header/Header";
+import Header from "portfolio/App/Common/Header/Header";
 import Blog from "./Blog/Blog";
 import Contact from "./Contact/Contact";
 import Projects from "./Projects/Projects";
