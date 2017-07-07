@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import { Menu } from 'semantic-ui-react'
-import {Link} from "react-router-dom";
+import React, {Component} from 'react';
+import {Menu} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 export class LinkMenu extends Component {
   constructor(props) {
@@ -15,6 +15,20 @@ export class LinkMenu extends Component {
 
   setActiveItem(item) {
     this.setState({ activeItem: item});
+  }
+
+  componentDidMount() {
+    // TODO : This is not a good way to go,
+    // MenuItem states are unavailables when executed
+    // activeItem propertie should be set according to the state.name of the item
+    for (let item of this.props.children) {
+      if (item.props.linkto === window.location.pathname) {
+        this.setState({
+          activeItem: item.props.linkto
+        });
+        return;
+      }
+    }
   }
 
   renderItems() {
@@ -37,8 +51,6 @@ export class LinkMenu extends Component {
     )
   }
 }
-
-
 
 export class LinkMenuItem extends Component {
   constructor(props) {
