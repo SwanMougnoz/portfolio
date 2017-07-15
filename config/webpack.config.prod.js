@@ -71,6 +71,9 @@ module.exports = {
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
   },
+  externals: {
+    config: JSON.stringify(require(paths.appConfig))
+  },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
@@ -199,7 +202,7 @@ module.exports = {
                 {
                   loader: require.resolve('postcss-loader'),
                   options: {
-                    // Necessary for external CSS imports to work
+                      // Necessary for external CSS imports to work
                     // https://github.com/facebookincubator/create-react-app/issues/2677
                     ident: 'postcss',
                     plugins: () => [
